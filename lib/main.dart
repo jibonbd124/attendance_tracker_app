@@ -1,6 +1,16 @@
+import 'package:attendance_tracker_app/pages/attendance_screen.dart';
+import 'package:attendance_tracker_app/provider/attendance_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => AttendanceProvider(),
+      child: const MyApp(),
+    ),
+  );
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -10,14 +20,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Attendance Tracker App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Center(child: const Text('Attendance Tracker App')),
+      theme: ThemeData(
+        appBarTheme: const AppBarTheme(
+          backgroundColor:Color(0xFFEAF1F7),
+          foregroundColor: Colors.black,
         ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
+        scaffoldBackgroundColor: const Color(0xFFEAF1F7),
       ),
+      home: const AttendanceScreen(),
     );
   }
 }
