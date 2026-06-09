@@ -68,6 +68,7 @@ class AttendanceScreen extends StatelessWidget {
                         ),
                       ),
                       onPressed: () {
+                        // navigate to summary screen done -----------------
                         Navigator.push(
                           context,
                           MaterialPageRoute(

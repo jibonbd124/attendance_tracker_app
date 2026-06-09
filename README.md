@@ -1,10 +1,14 @@
 # attendance_tracker_app
+---------------------------------------Why use ChangeNofifier and notifyListeners.....................?
+"We used ChangeNotifier and notifyListeners() to separate business logic from the UI and handle state management efficiently. It automatically triggers a UI rebuild whenever the underlying data changes, ensuring a real-time user experience."
 
 A new Flutter project.
 
 ## Getting Started
 
 This project is a starting point for a Flutter application.
+
+
 
 A few resources to get you started if this is your first Flutter project:
 
